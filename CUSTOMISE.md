@@ -5,6 +5,7 @@ This folder is the portfolio website for **Moosa Bukhari** (Roblox Game Develope
 - `index.html` — the entire site (HTML + CSS + JS in one file, no build step)
 - `CUSTOMISE.md` — this file
 - `headshot.png` — circular Roblox headshot shown in the nav (see §4)
+- `favicon.png` — circular headshot used as the browser-tab icon (see §4)
 
 To preview locally: double-click `index.html`, or run `open index.html` in this folder.
 
@@ -13,7 +14,7 @@ To preview locally: double-click `index.html`, or run `open index.html` in this 
 ## ✅ What's already done
 
 - Layout, dark animated theme, responsive design (phone → 4K)
-- Page order: Hero → Featured Games → Games Shipped → About + Avatar → Services → Contact
+- Page order: Hero → Featured Games → Games Shipped → About → Services → Contact
 - Name set to "Moosa Bukhari" everywhere
 - Contact email wired to `moosa.rbukhari@gmail.com`
 - Discord handle `razm00se` — click-to-copy button (contact + footer)
