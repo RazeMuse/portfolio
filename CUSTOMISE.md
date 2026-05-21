@@ -4,7 +4,7 @@ This folder is the portfolio website for **Moosa Bukhari** (Roblox Game Develope
 
 - `index.html` — the entire site (HTML + CSS + JS in one file, no build step)
 - `CUSTOMISE.md` — this file
-- `avatar.png` — *(add this yourself — see step 4)*
+- `headshot.png` — circular Roblox headshot shown in the nav (see §4)
 
 To preview locally: double-click `index.html`, or run `open index.html` in this folder.
 
@@ -20,7 +20,8 @@ To preview locally: double-click `index.html`, or run `open index.html` in this 
 - Footer socials trimmed to Roblox profile + Discord (X / YouTube removed)
 - 9 real game cards (3×3 grid) with live Roblox thumbnails (in `thumbs/`), clickable to each game
 - Each card shows `Role · Status` (Solo dev / Revamp · Live / In Development)
-- Avatar render added — `avatar.png` pulled live from the Roblox profile; panel re-lit so the dark outfit reads clearly
+- Headshot in the nav — circular Roblox headshot render (`headshot.png`) replaces the old "M" monogram next to the name
+- Full-body avatar render removed from the About section — Quick Facts now sits on its own, vertically centred
 
 ## 📍 Next session — pick up here
 
@@ -56,21 +57,23 @@ make a 3×4 grid of 12.
 Each card shows `Role · Status` — e.g. `Solo dev · Live` or `Revamp · In Development`.
 `Live` renders green, `In Development` renders amber.
 
-### 4. Avatar render — ✅ DONE
-`avatar.png` is the full-body render pulled from the Roblox profile
-(user 5428657360) via Roblox's thumbnail API, then cropped to the character
-(transparent PNG, 344×541). The avatar panel was re-lit (purple spotlight +
-ground glow + glow rim) so the mostly-black outfit reads clearly.
+### 4. Headshot — ✅ DONE
+The circular avatar next to "Moosa Bukhari" in the nav is `headshot.png` — a
+head-and-shoulders render pulled from Roblox's headshot API (user 5428657360).
+It replaced the old "M" monogram. The full-body avatar render that used to sit
+in the About section was removed, and the old `avatar.png` was deleted.
 
 To refresh it later (e.g. after changing your avatar in-game):
 ```bash
-curl -s "https://thumbnails.roblox.com/v1/users/avatar?userIds=5428657360&size=720x720&format=Png&isCircular=false"
-# download the imageUrl from the response, save it as avatar.png,
-# then crop the transparent padding (any image editor, or trim to the character)
+curl -s "https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=5428657360&size=420x420&format=Png&isCircular=false"
+# download the imageUrl from the response, save it as headshot.png
 ```
-**Important:** after replacing `avatar.png`, bump its cache-buster in
-`index.html` — find `avatar.png?v=` and increase the number (v2 → v3 …).
+**Important:** after replacing `headshot.png`, bump its cache-buster in
+`index.html` — find `headshot.png?v=` and increase the number (v1 → v2 …).
 Browsers cache images by filename, so without this the old one keeps showing.
+
+The favicon (browser tab icon) is still the "M" monogram — a tiny 16px
+headshot would be unreadable, so the letter mark is kept there on purpose.
 
 ### 5. About section
 Find `About Me`. Update:
@@ -119,6 +122,11 @@ Repo: https://github.com/RazeMuse/portfolio
   glow, glow rim) so the dark outfit stands out. Then cropped the transparent
   padding out of `avatar.png` (the character was only ~40% of the frame) and
   enlarged the render + taller panel so the figure is prominent.
+- **2026-05-21** — Replaced the nav "M" monogram with a circular Roblox
+  headshot render (`headshot.png`, from the headshot API — a clean
+  head-and-shoulders bust). Removed the full-body avatar render from the
+  About section and deleted the now-unused `avatar.png`; the Quick Facts card
+  now sits alone on the right, vertically centred so it reads as intentional.
   **Next:** hero tagline, About section, skills tags.
 
 *Last updated: 2026-05-21*

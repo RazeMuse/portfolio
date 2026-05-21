@@ -10,7 +10,7 @@
      HOW TO CUSTOMISE (swap placeholders before the meeting)
      1. Name / tagline ......... search "Moosa Bukhari"
      2. Games ................... edit the .game-card blocks
-     3. Avatar render .......... save a transparent PNG as avatar.png here
+     3. Headshot ............... headshot.png — pulled from the Roblox headshot API
      4. Contact email/links .... search "REPLACE"
      ============================================================ -->
 
@@ -95,8 +95,13 @@
   .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
   .logo { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk'; font-weight: 700; font-size: 1.15rem; }
   .logo-mark {
-    width: 34px; height: 34px; border-radius: 9px; background: var(--grad);
-    display: grid; place-items: center; font-weight: 800; color: #fff; font-size: 1.05rem;
+    width: 40px; height: 40px; border-radius: 50%; padding: 2px;
+    background: var(--grad); display: block; flex-shrink: 0;
+  }
+  .logo-mark img {
+    width: 100%; height: 100%; border-radius: 50%; display: block;
+    object-fit: cover;
+    background: radial-gradient(circle at 50% 34%, #ffffff, #d7d3e8);
   }
   .nav-links { display: flex; gap: 32px; align-items: center; }
   .nav-links a { color: var(--muted); font-size: 0.92rem; font-weight: 500; transition: color 0.2s; }
@@ -157,7 +162,7 @@
   .stat-note { color: var(--muted); font-size: 1.02rem; max-width: 360px; }
 
   /* ---------- about ---------- */
-  .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: start; }
+  .about-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; }
   .about-text p { color: var(--muted); margin-bottom: 18px; font-size: 1.04rem; }
   .skills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
   .skill {
@@ -166,30 +171,6 @@
     transition: transform 0.2s, border-color 0.2s;
   }
   .skill:hover { transform: translateY(-3px); border-color: var(--accent); }
-  .about-side { display: flex; flex-direction: column; gap: 22px; }
-  .avatar-panel {
-    position: relative; border-radius: 20px; overflow: hidden;
-    border: 1px solid var(--border); min-height: 380px;
-    display: grid; place-items: center; padding: 22px;
-    background:
-      radial-gradient(ellipse 50% 15% at 50% 89%, rgba(124,92,255,0.5), transparent 75%),
-      radial-gradient(circle at 50% 40%, rgba(150,128,255,0.36), transparent 68%),
-      linear-gradient(170deg, #221e3e, #13111d);
-  }
-  .avatar-render {
-    position: relative; z-index: 2; width: 100%; max-width: 300px;
-    display: block;
-    filter: drop-shadow(0 0 18px rgba(124,92,255,0.55))
-            drop-shadow(0 22px 28px rgba(0,0,0,0.6));
-  }
-  .avatar-placeholder {
-    position: absolute; inset: 0; z-index: 1; display: flex;
-    flex-direction: column; align-items: center; justify-content: center;
-    gap: 9px; text-align: center; padding: 26px; color: var(--muted);
-  }
-  .avatar-placeholder .ap-icon { font-size: 2.4rem; opacity: 0.85; }
-  .avatar-placeholder span { font-size: 1rem; font-weight: 600; color: var(--text); }
-  .avatar-placeholder small { font-size: 0.82rem; line-height: 1.55; max-width: 230px; }
   .about-card {
     background: var(--card); border: 1px solid var(--border); border-radius: 20px;
     padding: 32px; position: relative; overflow: hidden;
@@ -327,7 +308,7 @@
 <nav id="nav">
   <div class="wrap nav-inner">
     <a href="#top" class="logo">
-      <span class="logo-mark">M</span>
+      <span class="logo-mark"><img src="headshot.png?v=1" alt="Moosa Bukhari" /></span>
       <span>Moosa Bukhari</span>
     </a>
     <div class="nav-links">
@@ -495,27 +476,14 @@
         <span class="skill">Studio Plugins</span>
       </div>
     </div>
-    <div class="about-side">
-      <!-- AVATAR: save a transparent PNG of your Roblox character as avatar.png in this folder -->
-      <div class="avatar-panel reveal d1">
-        <div class="avatar-placeholder">
-          <span class="ap-icon">🧍</span>
-          <span>Your Roblox avatar render</span>
-          <small>Export a transparent PNG of your character and save it as <b>avatar.png</b> next to this file — it appears here automatically.</small>
-        </div>
-        <img src="avatar.png?v=2" alt="Moosa Bukhari — Roblox avatar render" class="avatar-render"
-             onload="this.previousElementSibling.style.display='none'"
-             onerror="this.style.display='none'" />
-      </div>
-      <div class="about-card reveal d2">
-        <h3>Quick Facts</h3>
-        <div class="info-row"><span>Experience</span><span>5+ Years</span></div>
-        <div class="info-row"><span>Specialty</span><span>Luau / Systems</span></div>
-        <div class="info-row"><span>Engine</span><span>Roblox Studio</span></div>
-        <div class="info-row"><span>Availability</span><span>Open</span></div>
-        <div class="info-row"><span>Response Time</span><span>&lt; 24 hours</span></div>
-        <div class="info-row"><span>Location</span><span>Remote · Worldwide</span></div>
-      </div>
+    <div class="about-card reveal d1">
+      <h3>Quick Facts</h3>
+      <div class="info-row"><span>Experience</span><span>5+ Years</span></div>
+      <div class="info-row"><span>Specialty</span><span>Luau / Systems</span></div>
+      <div class="info-row"><span>Engine</span><span>Roblox Studio</span></div>
+      <div class="info-row"><span>Availability</span><span>Open</span></div>
+      <div class="info-row"><span>Response Time</span><span>&lt; 24 hours</span></div>
+      <div class="info-row"><span>Location</span><span>Remote · Worldwide</span></div>
     </div>
   </div>
 </section>
