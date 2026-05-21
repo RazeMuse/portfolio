@@ -29,7 +29,6 @@ To preview locally: double-click `index.html`, or run `open index.html` in this 
 Still to customise (full details in the numbered sections below):
 
 - **§1 Hero tagline** — swap the generic *"players don't quit"* headline
-- **§6 Skills** — replace the 8 generic skill tags
 
 Also open / optional:
 - 2 more games still need their Roblox links — adding them (and re-adding NLBR) fills a 3×4 grid of 12
@@ -83,8 +82,11 @@ Roblox), and Quick Facts (4 yrs experience, Full-Game Dev, Open, < 24h, Remote).
 The hidden page meta description was also corrected — the old "50M+ visits"
 placeholder claim was removed.
 
-### 6. Skills
-Find `class="skills"` — edit the `<span class="skill">` tags (8 of them).
+### 6. Skills — ✅ DONE
+9 skill tags set to Moosa's real strengths: Luau Scripting, Full-Game
+Development, Game Systems & Mechanics, DataStores & Backend, Multiplayer &
+Anti-Exploit, Performance Optimization, Monetization & Live-Ops, UI / UX
+Design, Animation & VFX.
 
 ### 7. Contact — ✅ DONE
 Email and Discord handle are set. Discord button copies `razm00se` to the clipboard on click.
@@ -136,6 +138,11 @@ Repo: https://github.com/RazeMuse/portfolio
   games. The last two on Roblox.", a two-paragraph bio (Unity mobile fighting
   games → hypercasual → Roblox commissions & studio work), and updated Quick
   Facts. Also removed the fabricated "50M+ visits" claim from the page meta
-  description. **Next:** hero tagline, skills tags.
+  description.
+- **2026-05-21** — Replaced the 8 generic skill tags with 9 real ones (Moosa's
+  confirmed strengths). Rewrote the About bio to drop em-dashes and shorten it
+  — Moosa noted em-dashes read as AI-written. A few em-dashes still remain
+  elsewhere on the site (NoodleNuts card, stats-band note, a Services card),
+  left for a later pass. **Next:** hero tagline (§1).
 
 *Last updated: 2026-05-21*
