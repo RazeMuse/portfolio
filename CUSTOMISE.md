@@ -29,7 +29,6 @@ To preview locally: double-click `index.html`, or run `open index.html` in this 
 Still to customise (full details in the numbered sections below):
 
 - **§1 Hero tagline** — swap the generic *"players don't quit"* headline
-- **§5 About section** — real bio, heading, and Quick Facts
 - **§6 Skills** — replace the 8 generic skill tags
 
 Also open / optional:
@@ -78,11 +77,11 @@ a circular icon (purple→teal gradient ring + light backing), zoomed in on the
 head so it stays recognisable at small tab sizes. It's a generated image; ask
 Claude to rebuild it from `headshot.png` if you change your avatar.
 
-### 5. About section
-Find `About Me`. Update:
-- The heading (`Five years building…`) — your real experience
-- The two paragraphs of bio
-- **Quick Facts** card — find `Quick Facts`: Experience, Specialty, Availability, Response Time, Location
+### 5. About section — ✅ DONE
+Real heading, two-paragraph bio (Unity → mobile fighting games → hypercasual →
+Roblox), and Quick Facts (4 yrs experience, Full-Game Dev, Open, < 24h, Remote).
+The hidden page meta description was also corrected — the old "50M+ visits"
+placeholder claim was removed.
 
 ### 6. Skills
 Find `class="skills"` — edit the `<span class="skill">` tags (8 of them).
@@ -133,6 +132,10 @@ Repo: https://github.com/RazeMuse/portfolio
 - **2026-05-21** — Swapped the favicon: the old inline "M" SVG is now
   `favicon.png` — the headshot built into a circular icon (gradient ring +
   light backing, zoomed on the head) so the browser tab matches the nav.
-  **Next:** hero tagline, About section, skills tags.
+- **2026-05-21** — Wrote the real About section: heading "Four years building
+  games. The last two on Roblox.", a two-paragraph bio (Unity mobile fighting
+  games → hypercasual → Roblox commissions & studio work), and updated Quick
+  Facts. Also removed the fabricated "50M+ visits" claim from the page meta
+  description. **Next:** hero tagline, skills tags.
 
 *Last updated: 2026-05-21*
