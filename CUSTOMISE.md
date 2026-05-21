@@ -18,6 +18,8 @@ To preview locally: double-click `index.html`, or run `open index.html` in this 
 - Contact email wired to `moosa.rbukhari@gmail.com`
 - Discord handle `razm00se` — click-to-copy button (contact + footer)
 - Footer socials trimmed to Roblox profile + Discord (X / YouTube removed)
+- 10 real game cards with live Roblox thumbnails (in `thumbs/`), clickable to each game
+- Each card shows `Role · Status` (Solo dev / Revamp · Live / In Development)
 
 ## 📝 Remaining to customise
 
@@ -27,23 +29,16 @@ Open `index.html` in any text editor and use **Find** (Cmd+F) for the search ter
 Currently: *"Roblox games that players don't quit."*
 Find `players don't quit` — change the headline if you want your own line.
 
-### 2. Games (the main focus)
-Find `<!-- game-card -->`. There are **6 cards**. For each, edit:
-- `<h3>` — game title
-- `<p>` — one-line description
-- `<span class="game-tag">` — genre label
-- The two big letters in `.game-thumb` (e.g. `ST`) — initials shown on the thumbnail
-- `<div class="game-meta">` — see decision below
+### 2. Games — ✅ DONE
+10 real games are in, each as a clickable `<a class="game-card">` linking to its Roblox
+page. Thumbnails live in the `thumbs/` folder (fetched from Roblox). To add a game:
+copy a card block, set the `href`, `<img src>`, `<h3>`, `<p>`, `.game-tag` (genre) and
+`.game-meta` (role + status). 2 more games are still missing their Roblox links —
+add them later to make a perfect 3×4 grid (12 cards).
 
-Delete a whole `<article class="game-card">…</article>` block to have fewer than 6.
-
-### 3. Game card bottom line — ⚠️ DECISION NEEDED
-Each card currently shows fake numbers: `18M+ visits · 320K favorites`.
-Pick what to show instead and tell Claude, or edit `<div class="game-meta">` directly:
-- Role / year / status — e.g. `Solo dev · 2025 · Live`
-- Genre / status — e.g. `Tycoon · In Development`
-- Tech / scope — e.g. `Luau · Multiplayer`
-- Real visit/favorite numbers (only if they help)
+### 3. Game card bottom line — ✅ DECIDED
+Each card shows `Role · Status` — e.g. `Solo dev · Live` or `Revamp · In Development`.
+`Live` renders green, `In Development` renders amber.
 
 ### 4. Avatar render
 The About section shows a placeholder panel.
@@ -82,7 +77,8 @@ git push
 
 The live site refreshes about **1 minute** after each push.
 
-Live URL: *(filled in after first publish — see the repo's Pages settings)*
+Live URL: **https://razemuse.github.io/portfolio/**
+Repo: https://github.com/RazeMuse/portfolio
 
 ---
 

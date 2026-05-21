@@ -203,26 +203,24 @@
   /* ---------- games ---------- */
   .games-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
   .game-card {
+    display: block;
     background: var(--card); border: 1px solid var(--border); border-radius: 18px;
     overflow: hidden; transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
     cursor: pointer;
   }
   .game-card:hover { transform: translateY(-8px); border-color: rgba(124,92,255,0.5); box-shadow: 0 24px 50px rgba(0,0,0,0.5); }
   .game-thumb {
-    height: 190px; position: relative; display: grid; place-items: center;
-    font-family: 'Space Grotesk'; font-weight: 700; font-size: 2.6rem; color: rgba(255,255,255,0.92);
-    overflow: hidden;
+    height: 190px; position: relative; overflow: hidden; background: #0c0c16;
   }
+  .game-thumb img {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; display: block; transition: transform 0.45s ease;
+  }
+  .game-card:hover .game-thumb img { transform: scale(1.06); }
   .game-thumb::after {
-    content: ""; position: absolute; inset: 0;
-    background: linear-gradient(180deg, transparent 40%, rgba(0,0,0,0.55) 100%);
+    content: ""; position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(180deg, transparent 45%, rgba(0,0,0,0.55) 100%);
   }
-  .g1 { background: linear-gradient(135deg, #7c5cff, #4023a8); }
-  .g2 { background: linear-gradient(135deg, #20e3d2, #0b7d72); }
-  .g3 { background: linear-gradient(135deg, #ff5c8a, #a8234f); }
-  .g4 { background: linear-gradient(135deg, #ffb14a, #c2680a); }
-  .g5 { background: linear-gradient(135deg, #5c9bff, #1f3fa8); }
-  .g6 { background: linear-gradient(135deg, #9b5cff, #5c1fa8); }
   .game-tag {
     position: absolute; top: 12px; left: 12px; z-index: 2; font-size: 0.72rem;
     font-weight: 600; background: rgba(0,0,0,0.45); backdrop-filter: blur(6px);
@@ -231,8 +229,12 @@
   .game-body { padding: 22px; }
   .game-body h3 { font-size: 1.2rem; margin-bottom: 7px; }
   .game-body p { color: var(--muted); font-size: 0.92rem; margin-bottom: 16px; }
-  .game-meta { display: flex; gap: 18px; font-size: 0.83rem; color: var(--muted); }
-  .game-meta b { color: var(--text); font-weight: 600; }
+  .game-meta {
+    font-size: 0.82rem; color: var(--muted); font-weight: 500;
+    padding-top: 13px; border-top: 1px solid var(--border);
+  }
+  .status-live { color: #2bd673; font-weight: 700; }
+  .status-dev { color: #ffb14a; font-weight: 700; }
 
   /* ---------- services ---------- */
   .svc-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 56px; }
@@ -353,58 +355,120 @@
   <div class="wrap">
     <div class="eyebrow reveal">Selected Work</div>
     <h2 class="section-title reveal d1">Featured Games</h2>
-    <p class="section-sub reveal d2">Experiences I've designed, scripted and shipped on Roblox — placeholder cards for now, ready to swap for your real titles.</p>
+    <p class="section-sub reveal d2">Roblox experiences I've built and shipped — original solo games plus revamps that lifted established titles.</p>
 
     <div class="games-grid">
       <!-- game-card -->
-      <article class="game-card reveal d1">
-        <div class="game-thumb g1"><span class="game-tag">Tycoon</span>ST</div>
-        <div class="game-body">
-          <h3>Skybound Tycoon</h3>
-          <p>A floating-island tycoon with co-op building and a deep upgrade tree.</p>
-          <div class="game-meta"><span><b>18M+</b> visits</span><span><b>320K</b> favorites</span></div>
+      <a class="game-card reveal d1" href="https://www.roblox.com/games/138254693374195/Make-Friends-ROSA" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Social</span>
+          <img src="thumbs/rosa.png" alt="ROSA — Make Friends" loading="lazy" />
         </div>
-      </article>
-      <article class="game-card reveal d2">
-        <div class="game-thumb g2"><span class="game-tag">Parkour</span>SR</div>
         <div class="game-body">
-          <h3>Shadow Runners</h3>
-          <p>Fast-paced parkour with procedurally generated obstacle courses.</p>
-          <div class="game-meta"><span><b>11M+</b> visits</span><span><b>210K</b> favorites</span></div>
+          <h3>ROSA — Make Friends</h3>
+          <p>A social hangout built around deep profile customisation, community forums and making real friends.</p>
+          <div class="game-meta">Solo dev · <span class="status-live">Live</span></div>
         </div>
-      </article>
-      <article class="game-card reveal d3">
-        <div class="game-thumb g3"><span class="game-tag">RPG</span>MR</div>
+      </a>
+      <a class="game-card reveal d2" href="https://www.roblox.com/games/107230993629046" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Social</span>
+          <img src="thumbs/kpop.png" alt="KPOP" loading="lazy" />
+        </div>
         <div class="game-body">
-          <h3>Mystic Realms RPG</h3>
-          <p>Open-world RPG with quests, classes and a player-driven economy.</p>
-          <div class="game-meta"><span><b>9M+</b> visits</span><span><b>185K</b> favorites</span></div>
+          <h3>KPOP</h3>
+          <p>A K-pop social world with full avatar customisation and a built-in outfit creator.</p>
+          <div class="game-meta">Solo dev · <span class="status-live">Live</span></div>
         </div>
-      </article>
-      <article class="game-card reveal d1">
-        <div class="game-thumb g4"><span class="game-tag">Simulator</span>SL</div>
+      </a>
+      <a class="game-card reveal d3" href="https://www.roblox.com/games/117330008826468/Grow-Your-AI" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Simulator</span>
+          <img src="thumbs/grow-your-ai.png" alt="Grow Your AI" loading="lazy" />
+        </div>
         <div class="game-body">
-          <h3>Speed Legends</h3>
-          <p>Pet-powered running simulator with rebirths and seasonal events.</p>
-          <div class="game-meta"><span><b>7M+</b> visits</span><span><b>140K</b> favorites</span></div>
+          <h3>Grow Your AI</h3>
+          <p>Feed data to your AI to level it up, then expand and automate your data farm.</p>
+          <div class="game-meta">Solo dev · <span class="status-live">Live</span></div>
         </div>
-      </article>
-      <article class="game-card reveal d2">
-        <div class="game-thumb g5"><span class="game-tag">Tower Defense</span>TD</div>
+      </a>
+      <a class="game-card reveal d1" href="https://www.roblox.com/games/112410253287903/My-Data-Farm" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Tycoon</span>
+          <img src="thumbs/my-data-farm.png" alt="My Data Farm" loading="lazy" />
+        </div>
         <div class="game-body">
-          <h3>Tower Defense Titans</h3>
-          <p>Co-op TD with 40+ towers, boss waves and competitive leaderboards.</p>
-          <div class="game-meta"><span><b>5M+</b> visits</span><span><b>96K</b> favorites</span></div>
+          <h3>My Data Farm</h3>
+          <p>Link data cubes to AI bots, store data at scale and upgrade your whole operation.</p>
+          <div class="game-meta">Solo dev · <span class="status-live">Live</span></div>
         </div>
-      </article>
-      <article class="game-card reveal d3">
-        <div class="game-thumb g6"><span class="game-tag">Roleplay</span>PP</div>
+      </a>
+      <a class="game-card reveal d2" href="https://www.roblox.com/games/88862670672258/Build-Bridges-for-Brainrots" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Simulator</span>
+          <img src="thumbs/build-bridges.png" alt="Build Bridges for Brainrots" loading="lazy" />
+        </div>
         <div class="game-body">
-          <h3>Pet Paradise</h3>
-          <p>A cozy social roleplay world with adoption, housing and trading.</p>
-          <div class="game-meta"><span><b>2M+</b> visits</span><span><b>71K</b> favorites</span></div>
+          <h3>Build Bridges for Brainrots</h3>
+          <p>Build bridges across islands to reach and collect brainrots before your rivals.</p>
+          <div class="game-meta">Solo dev · <span class="status-live">Live</span></div>
         </div>
-      </article>
+      </a>
+      <a class="game-card reveal d3" href="https://www.roblox.com/games/75527025731008/Flex-and-Rate-Your-Avatar" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Showcase</span>
+          <img src="thumbs/flex-rate.png" alt="Flex and Rate Your Avatar" loading="lazy" />
+        </div>
+        <div class="game-body">
+          <h3>Flex and Rate Your Avatar</h3>
+          <p>Show off your avatar at rating stalls, earn donations and climb the boards.</p>
+          <div class="game-meta">Solo dev · <span class="status-live">Live</span></div>
+        </div>
+      </a>
+      <a class="game-card reveal d1" href="https://www.roblox.com/games/18994582299/OFFICIAL-NLBR-TRACK-1" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Racing</span>
+          <img src="thumbs/nlbr.png" alt="NLBR — Track 1" loading="lazy" />
+        </div>
+        <div class="game-body">
+          <h3>NLBR — Track 1</h3>
+          <p>Drag racing rebuilt for speed — tuned car handling, smoother tracks and big performance gains.</p>
+          <div class="game-meta">Revamp · <span class="status-live">Live</span></div>
+        </div>
+      </a>
+      <a class="game-card reveal d2" href="https://www.roblox.com/games/11299433373/Tapping-World-Simulator" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Simulator</span>
+          <img src="thumbs/tapping-world.png" alt="Tapping World Simulator" loading="lazy" />
+        </div>
+        <div class="game-body">
+          <h3>Tapping World Simulator</h3>
+          <p>A tap-to-progress simulator upgraded with fresh features and social hooks.</p>
+          <div class="game-meta">Revamp · <span class="status-live">Live</span></div>
+        </div>
+      </a>
+      <a class="game-card reveal d3" href="https://www.roblox.com/games/131094210668665/The-Haunting-of-NoodleNuts" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Horror</span>
+          <img src="thumbs/noodlenuts.png" alt="The Haunting of NoodleNuts" loading="lazy" />
+        </div>
+        <div class="game-body">
+          <h3>The Haunting of NoodleNuts</h3>
+          <p>A Bear Alpha-style horror chase — survive the hunter or become the monster.</p>
+          <div class="game-meta">Revamp · <span class="status-live">Live</span></div>
+        </div>
+      </a>
+      <a class="game-card reveal d1" href="https://www.roblox.com/games/115354092932976" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Adventure</span>
+          <img src="thumbs/avatar-airbender.png" alt="Avatar Airbender" loading="lazy" />
+        </div>
+        <div class="game-body">
+          <h3>Avatar Airbender</h3>
+          <p>An elemental bending adventure inspired by Avatar — currently in development.</p>
+          <div class="game-meta">Solo dev · <span class="status-dev">In Development</span></div>
+        </div>
+      </a>
     </div>
   </div>
 </section>
@@ -504,7 +568,7 @@
       <h2>Let's build something<br>players love.</h2>
       <p>Have a game idea or a project that needs a developer? Tell me about it — I reply within 24 hours.</p>
       <div class="contact-actions">
-        <a href="mailto:moosa.rbukhari@gmail.com" class="btn btn-primary">✉ moosa.rbukhari@gmail.com</a>
+        <a href="mailto:moosa.rbukhari@gmail.com" class="btn btn-primary">moosa.rbukhari@gmail.com</a>
         <button type="button" class="btn btn-ghost" data-copy="razm00se">Discord: razm00se</button>
       </div>
     </div>
