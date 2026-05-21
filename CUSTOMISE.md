@@ -102,7 +102,8 @@ Repo: https://github.com/RazeMuse/portfolio
 
 - **2026-05-21** — Initial site committed. Wired contact email + Discord click-to-copy,
   trimmed footer socials to Roblox + Discord, and built 9 real game cards with live
-  Roblox thumbnails in a 3×3 grid. All published to GitHub Pages.
+  Roblox thumbnails in a 3×3 grid. Avatar Airbender role corrected to Revamp.
+  All published to GitHub Pages.
   **Next:** hero tagline, avatar render, About section, skills tags.
 
 *Last updated: 2026-05-21*
