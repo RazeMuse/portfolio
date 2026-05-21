@@ -172,12 +172,15 @@
     border: 1px solid var(--border); min-height: 330px;
     display: grid; place-items: center; padding: 26px;
     background:
-      radial-gradient(circle at 50% 16%, rgba(124,92,255,0.34), transparent 62%),
-      linear-gradient(170deg, #1b1834, #101019);
+      radial-gradient(ellipse 56% 16% at 50% 80%, rgba(124,92,255,0.45), transparent 75%),
+      radial-gradient(circle at 50% 42%, rgba(150,128,255,0.34), transparent 66%),
+      linear-gradient(170deg, #221e3e, #13111d);
   }
   .avatar-render {
     position: relative; z-index: 2; width: 100%; max-width: 250px;
-    display: block; filter: drop-shadow(0 22px 30px rgba(0,0,0,0.6));
+    display: block;
+    filter: drop-shadow(0 0 16px rgba(124,92,255,0.5))
+            drop-shadow(0 20px 26px rgba(0,0,0,0.55));
   }
   .avatar-placeholder {
     position: absolute; inset: 0; z-index: 1; display: flex;

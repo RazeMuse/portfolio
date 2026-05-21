@@ -20,13 +20,13 @@ To preview locally: double-click `index.html`, or run `open index.html` in this 
 - Footer socials trimmed to Roblox profile + Discord (X / YouTube removed)
 - 9 real game cards (3×3 grid) with live Roblox thumbnails (in `thumbs/`), clickable to each game
 - Each card shows `Role · Status` (Solo dev / Revamp · Live / In Development)
+- Avatar render added — `avatar.png` pulled live from the Roblox profile; panel re-lit so the dark outfit reads clearly
 
 ## 📍 Next session — pick up here
 
 Still to customise (full details in the numbered sections below):
 
 - **§1 Hero tagline** — swap the generic *"players don't quit"* headline
-- **§4 Avatar render** — add `avatar.png` (transparent PNG of your Roblox character)
 - **§5 About section** — real bio, heading, and Quick Facts
 - **§6 Skills** — replace the 8 generic skill tags
 
@@ -56,11 +56,17 @@ make a 3×4 grid of 12.
 Each card shows `Role · Status` — e.g. `Solo dev · Live` or `Revamp · In Development`.
 `Live` renders green, `In Development` renders amber.
 
-### 4. Avatar render
-The About section shows a placeholder panel.
-1. Export a **transparent PNG** of your Roblox character (full-body render looks best)
-2. Save it in this folder as exactly **`avatar.png`**
-3. Refresh — it appears automatically
+### 4. Avatar render — ✅ DONE
+`avatar.png` is the full-body render pulled straight from the Roblox profile
+(user 5428657360) via Roblox's thumbnail API — a transparent 720×720 PNG.
+The avatar panel was re-lit (brighter purple spotlight + glow rim) so the
+mostly-black outfit reads clearly instead of blending into the dark panel.
+
+To refresh it later (e.g. after changing your avatar in-game):
+```bash
+curl -s "https://thumbnails.roblox.com/v1/users/avatar?userIds=5428657360&size=720x720&format=Png&isCircular=false"
+# then download the imageUrl from the response, save it as avatar.png
+```
 
 ### 5. About section
 Find `About Me`. Update:
@@ -104,6 +110,9 @@ Repo: https://github.com/RazeMuse/portfolio
   trimmed footer socials to Roblox + Discord, and built 9 real game cards with live
   Roblox thumbnails in a 3×3 grid. Avatar Airbender role corrected to Revamp.
   All published to GitHub Pages.
-  **Next:** hero tagline, avatar render, About section, skills tags.
+- **2026-05-21** — Added the avatar render: pulled `avatar.png` from the Roblox
+  thumbnail API and re-lit the avatar panel (brighter purple spotlight, ground
+  glow, glow rim) so the dark outfit stands out.
+  **Next:** hero tagline, About section, skills tags.
 
 *Last updated: 2026-05-21*
