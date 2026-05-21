@@ -112,7 +112,9 @@ Repo: https://github.com/RazeMuse/portfolio
   All published to GitHub Pages.
 - **2026-05-21** — Added the avatar render: pulled `avatar.png` from the Roblox
   thumbnail API and re-lit the avatar panel (brighter purple spotlight, ground
-  glow, glow rim) so the dark outfit stands out.
+  glow, glow rim) so the dark outfit stands out. Then cropped the transparent
+  padding out of `avatar.png` (the character was only ~40% of the frame) and
+  enlarged the render + taller panel so the figure is prominent.
   **Next:** hero tagline, About section, skills tags.
 
 *Last updated: 2026-05-21*
