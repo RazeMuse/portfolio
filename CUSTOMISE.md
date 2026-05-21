@@ -15,6 +15,9 @@ To preview locally: double-click `index.html`, or run `open index.html` in this 
 - Layout, dark animated theme, responsive design (phone → 4K)
 - Page order: Hero → Featured Games → Games Shipped → About + Avatar → Services → Contact
 - Name set to "Moosa Bukhari" everywhere
+- Contact email wired to `moosa.rbukhari@gmail.com`
+- Discord handle `razm00se` — click-to-copy button (contact + footer)
+- Footer socials trimmed to Roblox profile + Discord (X / YouTube removed)
 
 ## 📝 Remaining to customise
 
@@ -57,13 +60,11 @@ Find `About Me`. Update:
 ### 6. Skills
 Find `class="skills"` — edit the `<span class="skill">` tags (8 of them).
 
-### 7. Contact — ⚠️ PLACEHOLDERS LIVE NOW
-Find `REPLACE`:
-- Email — currently `your@email.com`
-- Discord handle — currently `yourhandle`
+### 7. Contact — ✅ DONE
+Email and Discord handle are set. Discord button copies `razm00se` to the clipboard on click.
 
-### 8. Social links
-Find `REPLACE social links` in the footer — set real URLs for Roblox, X, Discord, YouTube (or delete the ones you don't use).
+### 8. Social links — ✅ DONE
+Footer shows Roblox profile + Discord (click-to-copy). To add X or YouTube back later, copy a footer `<a>` and set its `href`.
 
 ---
 
