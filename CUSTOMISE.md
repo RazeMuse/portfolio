@@ -72,8 +72,10 @@ curl -s "https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=54286573
 `index.html` — find `headshot.png?v=` and increase the number (v1 → v2 …).
 Browsers cache images by filename, so without this the old one keeps showing.
 
-The favicon (browser tab icon) is still the "M" monogram — a tiny 16px
-headshot would be unreadable, so the letter mark is kept there on purpose.
+The favicon (browser tab icon) is `favicon.png` — the headshot composed into
+a circular icon (purple→teal gradient ring + light backing), zoomed in on the
+head so it stays recognisable at small tab sizes. It's a generated image; ask
+Claude to rebuild it from `headshot.png` if you change your avatar.
 
 ### 5. About section
 Find `About Me`. Update:
@@ -127,6 +129,9 @@ Repo: https://github.com/RazeMuse/portfolio
   head-and-shoulders bust). Removed the full-body avatar render from the
   About section and deleted the now-unused `avatar.png`; the Quick Facts card
   now sits alone on the right, vertically centred so it reads as intentional.
+- **2026-05-21** — Swapped the favicon: the old inline "M" SVG is now
+  `favicon.png` — the headshot built into a circular icon (gradient ring +
+  light backing, zoomed on the head) so the browser tab matches the nav.
   **Next:** hero tagline, About section, skills tags.
 
 *Last updated: 2026-05-21*
