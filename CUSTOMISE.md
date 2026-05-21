@@ -18,7 +18,7 @@ To preview locally: double-click `index.html`, or run `open index.html` in this 
 - Contact email wired to `moosa.rbukhari@gmail.com`
 - Discord handle `razm00se` — click-to-copy button (contact + footer)
 - Footer socials trimmed to Roblox profile + Discord (X / YouTube removed)
-- 10 real game cards with live Roblox thumbnails (in `thumbs/`), clickable to each game
+- 9 real game cards (3×3 grid) with live Roblox thumbnails (in `thumbs/`), clickable to each game
 - Each card shows `Role · Status` (Solo dev / Revamp · Live / In Development)
 
 ## 📝 Remaining to customise
@@ -30,11 +30,14 @@ Currently: *"Roblox games that players don't quit."*
 Find `players don't quit` — change the headline if you want your own line.
 
 ### 2. Games — ✅ DONE
-10 real games are in, each as a clickable `<a class="game-card">` linking to its Roblox
-page. Thumbnails live in the `thumbs/` folder (fetched from Roblox). To add a game:
-copy a card block, set the `href`, `<img src>`, `<h3>`, `<p>`, `.game-tag` (genre) and
-`.game-meta` (role + status). 2 more games are still missing their Roblox links —
-add them later to make a perfect 3×4 grid (12 cards).
+9 real games are in (clean 3×3 grid), each a clickable `<a class="game-card">` linking
+to its Roblox page. Thumbnails live in the `thumbs/` folder (fetched from Roblox). To
+add a game: copy a card block, set the `href`, `<img src>`, `<h3>`, `<p>`, `.game-tag`
+(genre) and `.game-meta` (role + status).
+
+NLBR was removed for now to keep the grid even — its thumbnail `thumbs/nlbr.png` is
+still in the repo. Re-adding NLBR plus the 2 games still missing their links would
+make a 3×4 grid of 12.
 
 ### 3. Game card bottom line — ✅ DECIDED
 Each card shows `Role · Status` — e.g. `Solo dev · Live` or `Revamp · In Development`.
