@@ -57,16 +57,20 @@ Each card shows `Role · Status` — e.g. `Solo dev · Live` or `Revamp · In De
 `Live` renders green, `In Development` renders amber.
 
 ### 4. Avatar render — ✅ DONE
-`avatar.png` is the full-body render pulled straight from the Roblox profile
-(user 5428657360) via Roblox's thumbnail API — a transparent 720×720 PNG.
-The avatar panel was re-lit (brighter purple spotlight + glow rim) so the
-mostly-black outfit reads clearly instead of blending into the dark panel.
+`avatar.png` is the full-body render pulled from the Roblox profile
+(user 5428657360) via Roblox's thumbnail API, then cropped to the character
+(transparent PNG, 344×541). The avatar panel was re-lit (purple spotlight +
+ground glow + glow rim) so the mostly-black outfit reads clearly.
 
 To refresh it later (e.g. after changing your avatar in-game):
 ```bash
 curl -s "https://thumbnails.roblox.com/v1/users/avatar?userIds=5428657360&size=720x720&format=Png&isCircular=false"
-# then download the imageUrl from the response, save it as avatar.png
+# download the imageUrl from the response, save it as avatar.png,
+# then crop the transparent padding (any image editor, or trim to the character)
 ```
+**Important:** after replacing `avatar.png`, bump its cache-buster in
+`index.html` — find `avatar.png?v=` and increase the number (v2 → v3 …).
+Browsers cache images by filename, so without this the old one keeps showing.
 
 ### 5. About section
 Find `About Me`. Update:
