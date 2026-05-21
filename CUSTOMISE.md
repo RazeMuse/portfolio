@@ -26,21 +26,20 @@ To preview locally: double-click `index.html`, or run `open index.html` in this 
 
 ## 📍 Next session — pick up here
 
-Still to customise (full details in the numbered sections below):
+All placeholder content is now customised — the site is fully personalised.
 
-- **§1 Hero tagline** — swap the generic *"players don't quit"* headline
-
-Also open / optional:
+Open / optional only:
 - 2 more games still need their Roblox links — adding them (and re-adding NLBR) fills a 3×4 grid of 12
 - Game card roles are accepted as "good enough for now" — revisit any if needed
+- A few em-dashes remain in body copy (NoodleNuts card, stats-band note, a Services card) — optional cleanup
 
 ## 📝 Remaining to customise
 
 Open `index.html` in any text editor and use **Find** (Cmd+F) for the search terms below.
 
-### 1. Tagline
-Currently: *"Roblox games that players don't quit."*
-Find `players don't quit` — change the headline if you want your own line.
+### 1. Tagline — ✅ DONE
+Hero headline is now "Your idea, made playable." (second line in the
+purple→teal accent). The subtitle's em-dash was swapped for a comma too.
 
 ### 2. Games — ✅ DONE
 9 real games are in (clean 3×3 grid), each a clickable `<a class="game-card">` linking
@@ -144,5 +143,8 @@ Repo: https://github.com/RazeMuse/portfolio
   — Moosa noted em-dashes read as AI-written. A few em-dashes still remain
   elsewhere on the site (NoodleNuts card, stats-band note, a Services card),
   left for a later pass. **Next:** hero tagline (§1).
+- **2026-05-21** — Set the hero headline to "Your idea, made playable."
+  (replacing the generic "players don't quit" line) and swapped the em-dash
+  in the hero subtitle for a comma. All placeholder content is now done.
 
 *Last updated: 2026-05-21*
