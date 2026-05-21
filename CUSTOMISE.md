@@ -21,6 +21,19 @@ To preview locally: double-click `index.html`, or run `open index.html` in this 
 - 9 real game cards (3×3 grid) with live Roblox thumbnails (in `thumbs/`), clickable to each game
 - Each card shows `Role · Status` (Solo dev / Revamp · Live / In Development)
 
+## 📍 Next session — pick up here
+
+Still to customise (full details in the numbered sections below):
+
+- **§1 Hero tagline** — swap the generic *"players don't quit"* headline
+- **§4 Avatar render** — add `avatar.png` (transparent PNG of your Roblox character)
+- **§5 About section** — real bio, heading, and Quick Facts
+- **§6 Skills** — replace the 8 generic skill tags
+
+Also open / optional:
+- 2 more games still need their Roblox links — adding them (and re-adding NLBR) fills a 3×4 grid of 12
+- Game card roles are accepted as "good enough for now" — revisit any if needed
+
 ## 📝 Remaining to customise
 
 Open `index.html` in any text editor and use **Find** (Cmd+F) for the search terms below.
@@ -84,5 +97,12 @@ Live URL: **https://razemuse.github.io/portfolio/**
 Repo: https://github.com/RazeMuse/portfolio
 
 ---
+
+## 📜 Progress log
+
+- **2026-05-21** — Initial site committed. Wired contact email + Discord click-to-copy,
+  trimmed footer socials to Roblox + Discord, and built 9 real game cards with live
+  Roblox thumbnails in a 3×3 grid. All published to GitHub Pages.
+  **Next:** hero tagline, avatar render, About section, skills tags.
 
 *Last updated: 2026-05-21*
