@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Moosa Bukhari — Roblox Game Developer</title>
-<meta name="description" content="Roblox game developer specialising in full-game builds — original solo titles and revamps. Available for commissions worldwide." />
+<meta name="description" content="Roblox game developer. I build games end to end and run them after launch: four games of my own plus client titles. Open to remote roles." />
 
 <!-- ============================================================
      HOW TO CUSTOMISE (swap placeholders before the meeting)
@@ -217,6 +217,14 @@
     font-size: 0.82rem; color: var(--muted); font-weight: 500;
     padding-top: 13px; border-top: 1px solid var(--border);
   }
+  .game-card.featured { grid-column: 1 / -1; display: flex; }
+  .game-card.featured .game-thumb { flex: 0 0 56%; height: auto; min-height: 350px; }
+  .game-card.featured .game-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 30px; }
+  .game-card.featured h3 { font-size: 1.7rem; }
+  .game-card.featured .game-body p { font-size: 0.98rem; }
+  .feat-stats { display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px; }
+  .feat-stats div { font-size: 0.9rem; color: var(--muted); }
+  .feat-stats b { font-family: 'Space Grotesk'; font-size: 1.25rem; color: var(--text); margin-right: 6px; }
   .status-live { color: #2bd673; font-weight: 700; }
   .status-dev { color: #ffb14a; font-weight: 700; }
 
@@ -292,6 +300,9 @@
     .stat-row { flex-direction: column; align-items: flex-start; gap: 14px; }
     .about-grid { grid-template-columns: 1fr; gap: 38px; }
     .games-grid { grid-template-columns: 1fr; }
+    .game-card.featured { grid-column: auto; display: block; }
+    .game-card.featured .game-thumb { height: 190px; min-height: 0; }
+    .game-card.featured .game-body { padding: 22px; }
     .svc-grid { grid-template-columns: 1fr; }
     .section-pad { padding: 80px 0; }
     .contact-box { padding: 48px 24px; }
@@ -324,12 +335,12 @@
 <!-- ================= HERO ================= -->
 <section class="hero" id="top">
   <div class="wrap">
-    <div class="hero-badge reveal"><span class="pulse"></span> Available for new commissions</div>
-    <h1 class="reveal d1">Your idea,<br><span class="gradient-text">made playable.</span></h1>
-    <p class="lead reveal d2">I'm Moosa, a Roblox game developer and Luau scripter. I build polished, scalable experiences from the first line of code to the live update that keeps players coming back.</p>
+    <div class="hero-badge reveal"><span class="pulse"></span> Open to remote Roblox roles</div>
+    <h1 class="reveal d1">I ship Roblox games<br><span class="gradient-text">and run them live.</span></h1>
+    <p class="lead reveal d2">I'm Moosa, a Roblox game developer. I build games end to end and run them after launch. My latest, Be a Pharaoh, was built solo in 8 weeks and has passed 326K visits.</p>
     <div class="hero-actions reveal d3">
       <a href="#games" class="btn btn-primary">View My Work →</a>
-      <a href="#contact" class="btn btn-ghost">Start a Project</a>
+      <a href="#contact" class="btn btn-ghost">Get in Touch</a>
     </div>
   </div>
 </section>
@@ -339,30 +350,47 @@
   <div class="wrap">
     <div class="eyebrow reveal">Selected Work</div>
     <h2 class="section-title reveal d1">Featured Games</h2>
-    <p class="section-sub reveal d2">Roblox experiences I've built and shipped — original solo games plus revamps that lifted established titles.</p>
+    <p class="section-sub reveal d2">Roblox experiences I've built and shipped: my own games, client builds, and revamps of established titles.</p>
 
     <div class="games-grid">
+      <!-- featured game-card -->
+      <a class="game-card featured reveal d1" href="https://www.roblox.com/games/114231786329117" target="_blank" rel="noopener">
+        <div class="game-thumb">
+          <span class="game-tag">Featured · Tycoon</span>
+          <img src="thumbs/be-a-pharaoh.png" alt="Be a Pharaoh" loading="lazy" />
+        </div>
+        <div class="game-body">
+          <h3>Be a Pharaoh</h3>
+          <p>Dig relics out of the quarry, put them on display, and raise your pyramid level after level. Design, scripting, UI, economy, monetization, ads and live updates are all mine.</p>
+          <div class="feat-stats">
+            <div><b>326K+</b>visits</div>
+            <div><b>8,000+</b>daily players at its October peak</div>
+            <div><b>8 weeks</b>from first line to launch</div>
+          </div>
+          <div class="game-meta">Solo dev · <span class="status-live">Live</span></div>
+        </div>
+      </a>
       <!-- game-card -->
       <a class="game-card reveal d1" href="https://www.roblox.com/games/138254693374195/Make-Friends-ROSA" target="_blank" rel="noopener">
         <div class="game-thumb">
           <span class="game-tag">Social</span>
-          <img src="thumbs/rosa.png" alt="ROSA — Make Friends" loading="lazy" />
+          <img src="thumbs/rosa.png" alt="Rosa Avatar Studio" loading="lazy" />
         </div>
         <div class="game-body">
-          <h3>ROSA — Make Friends</h3>
-          <p>A social hangout built around deep profile customisation, community forums and making real friends.</p>
-          <div class="game-meta">Solo dev · <span class="status-live">Live</span></div>
+          <h3>Rosa Avatar Studio</h3>
+          <p>A UGC avatar studio and social space, with deep profile customisation and community forums.</p>
+          <div class="game-meta">Client build · <span class="status-live">Live</span></div>
         </div>
       </a>
       <a class="game-card reveal d2" href="https://www.roblox.com/games/107230993629046" target="_blank" rel="noopener">
         <div class="game-thumb">
           <span class="game-tag">Social</span>
-          <img src="thumbs/kpop.png" alt="KPOP" loading="lazy" />
+          <img src="thumbs/kpop.png" alt="K-POP Plaza" loading="lazy" />
         </div>
         <div class="game-body">
-          <h3>KPOP</h3>
+          <h3>K-POP Plaza</h3>
           <p>A K-pop social world with full avatar customisation and a built-in outfit creator.</p>
-          <div class="game-meta">Solo dev · <span class="status-live">Live</span></div>
+          <div class="game-meta">Client build · <span class="status-live">Live</span></div>
         </div>
       </a>
       <a class="game-card reveal d3" href="https://www.roblox.com/games/117330008826468/Grow-Your-AI" target="_blank" rel="noopener">
@@ -406,7 +434,7 @@
         <div class="game-body">
           <h3>Flex and Rate Your Avatar</h3>
           <p>Show off your avatar at rating stalls, earn donations and climb the boards.</p>
-          <div class="game-meta">Solo dev · <span class="status-live">Live</span></div>
+          <div class="game-meta">Client build · <span class="status-live">Live</span></div>
         </div>
       </a>
       <a class="game-card reveal d1" href="https://www.roblox.com/games/11299433373/Tapping-World-Simulator" target="_blank" rel="noopener">
@@ -434,12 +462,12 @@
       <a class="game-card reveal d3" href="https://www.roblox.com/games/115354092932976" target="_blank" rel="noopener">
         <div class="game-thumb">
           <span class="game-tag">Adventure</span>
-          <img src="thumbs/avatar-airbender.png" alt="Avatar Airbender" loading="lazy" />
+          <img src="thumbs/avatar-airbender.png" alt="Fourfold Legacy" loading="lazy" />
         </div>
         <div class="game-body">
-          <h3>Avatar Airbender</h3>
-          <p>An elemental bending adventure inspired by Avatar — currently in development.</p>
-          <div class="game-meta">Revamp · <span class="status-dev">In Development</span></div>
+          <h3>Fourfold Legacy</h3>
+          <p>An elemental bending adventure, now in beta.</p>
+          <div class="game-meta">Revamp · <span class="status-dev">Beta</span></div>
         </div>
       </a>
     </div>
@@ -450,7 +478,7 @@
 <section class="stats-band">
   <div class="wrap stat-row">
     <div class="stat reveal">
-      <div class="stat-num gradient-text"><span data-target="12" data-suffix="">0</span></div>
+      <div class="stat-num gradient-text"><span data-target="10" data-suffix="">0</span></div>
       <div class="stat-label">Games Shipped</div>
     </div>
     <p class="stat-note reveal d1">Each one built end to end — designed, scripted, polished and launched.</p>
@@ -463,7 +491,7 @@
     <div class="about-text">
       <div class="eyebrow reveal">About Me</div>
       <h2 class="section-title reveal d1">Four years building games.<br>The last two on Roblox.</h2>
-      <p class="reveal d2">I came to Roblox the long way. I spent two years in Unity building mobile fighting games and hypercasual titles, then my younger brother got me into Roblox. I saw the potential, left my job to learn it properly, and two years on I take commissions and have worked with some of the platform's bigger studios.</p>
+      <p class="reveal d2">I came to Roblox the long way. I spent two years in Unity building mobile fighting games and hypercasual titles, then my younger brother got me into Roblox. I saw the potential, left my job to learn it properly, and two years on I've shipped four games of my own and built live titles for clients. I'm looking for a remote role with a Roblox studio.</p>
       <p class="reveal d3">What drives me is finding the one idea that makes a game stand out, like the community forum we built into ROSA. I'm a simulator player at heart, so I care about the progression loops and systems that genuinely keep players coming back.</p>
       <div class="skills reveal d4">
         <span class="skill">Luau Scripting</span>
@@ -482,7 +510,7 @@
       <div class="info-row"><span>Experience</span><span>4 Years</span></div>
       <div class="info-row"><span>Specialty</span><span>Full-Game Dev</span></div>
       <div class="info-row"><span>Engine</span><span>Roblox Studio</span></div>
-      <div class="info-row"><span>Availability</span><span>Open</span></div>
+      <div class="info-row"><span>Availability</span><span>Open to remote roles</span></div>
       <div class="info-row"><span>Response Time</span><span>&lt; 24 hours</span></div>
       <div class="info-row"><span>Location</span><span>Remote · Worldwide</span></div>
     </div>
@@ -493,8 +521,8 @@
 <section class="section-pad" id="services">
   <div class="wrap">
     <div class="eyebrow reveal">What I Do</div>
-    <h2 class="section-title reveal d1">Services</h2>
-    <p class="section-sub reveal d2">Flexible engagements — from a single scripted system to a full game built end to end.</p>
+    <h2 class="section-title reveal d1">What I bring to a team</h2>
+    <p class="section-sub reveal d2">From a single scripted system to a full game built end to end.</p>
 
     <div class="svc-grid">
       <div class="svc-card reveal d1">
@@ -527,7 +555,7 @@
     <div class="contact-box reveal">
       <div class="eyebrow" style="justify-content:center;">Get In Touch</div>
       <h2>Let's build something<br>players love.</h2>
-      <p>Have a game idea or a project that needs a developer? Tell me about it — I reply within 24 hours.</p>
+      <p>Hiring for a Roblox team, or have a project that needs a developer? Tell me about it — I reply within 24 hours.</p>
       <div class="contact-actions">
         <a href="mailto:moosa.rbukhari@gmail.com" class="btn btn-primary">moosa.rbukhari@gmail.com</a>
         <button type="button" class="btn btn-ghost" data-copy="razm00se">Discord: razm00se</button>
