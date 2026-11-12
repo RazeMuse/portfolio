@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Working rules for building with Claude — Moosa Bukhari</title>
+<meta name="description" content="The standing rules I keep for building games with Claude: source tags on every claim, no theory before inventory, and evidence before a pass." />
+<meta name="robots" content="noindex" />
+<link rel="icon" type="image/png" href="favicon.png?v=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #07070d;
+    --card: #13131f;
+    --border: rgba(255, 255, 255, 0.08);
+    --text: #ecebf5;
+    --muted: #9b9ab3;
+    --accent: #7c5cff;
+    --accent-2: #20e3d2;
+    --grad: linear-gradient(120deg, #7c5cff 0%, #20e3d2 100%);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--text);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7; -webkit-font-smoothing: antialiased;
+  }
+  ::selection { background: var(--accent); color: #fff; }
+  a { color: var(--accent-2); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 20px 96px; }
+  .back { display: block; font-size: 0.9rem; font-weight: 500; color: var(--muted); }
+  .eyebrow {
+    display: flex; align-items: center; gap: 8px; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-2); margin: 40px 0 14px;
+  }
+  .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--accent-2); border-radius: 2px; }
+  h1, h2 { font-family: 'Space Grotesk', 'Inter', sans-serif; line-height: 1.2; letter-spacing: -0.02em; }
+  h1 { font-size: clamp(1.9rem, 5vw, 2.7rem); font-weight: 700; margin-bottom: 18px; }
+  h2 { font-size: 1.35rem; font-weight: 700; margin: 0 0 6px; }
+  .ratified { font-size: 0.85rem; color: var(--muted); margin-bottom: 16px; }
+  .intro { color: var(--muted); font-size: 1.04rem; }
+  .intro strong { color: var(--text); font-weight: 600; }
+  section {
+    background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+    padding: 28px 26px; margin-top: 28px;
+  }
+  p { margin-bottom: 14px; }
+  p:last-child { margin-bottom: 0; }
+  ol, ul { padding-left: 22px; }
+  ol > li { margin-bottom: 16px; padding-left: 4px; }
+  ol > li:last-child { margin-bottom: 0; }
+  ol > li::marker { color: var(--accent-2); font-weight: 700; }
+  ul > li { margin: 8px 0; }
+  ul > li::marker { color: var(--accent); }
+  strong { font-weight: 700; }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.86em;
+    background: rgba(124, 92, 255, 0.14); border: 1px solid rgba(124, 92, 255, 0.25);
+    padding: 1px 6px; border-radius: 5px; overflow-wrap: anywhere;
+  }
+  footer { margin-top: 40px; color: var(--muted); font-size: 0.9rem; }
+  @media (max-width: 520px) { .wrap { padding: 36px 16px 72px; } section { padding: 22px 18px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <a class="back" href="./">&larr; Moosa Bukhari, portfolio</a>
+
+  <div class="eyebrow">How I work with AI</div>
+  <h1>Working rules for building with Claude</h1>
+  <p class="intro">These are excerpts from the standing instructions I keep for Claude across my game projects.
+  Each rule was written with Claude after a session where something went wrong, and <strong>I ratified each one</strong>.
+  They are quoted from my files, lightly trimmed: project paths, client names, a few examples and unrelated
+  sections are left out. Tags like &ldquo;s296&rdquo; are session numbers on a project. The rules speak in
+  Claude&rsquo;s voice, so &ldquo;my&rdquo; and &ldquo;I&rdquo; inside them mean the model.</p>
+
+  <section>
+    <h2>Truth discipline</h2>
+    <div class="ratified">Ratified 2026-08-10</div>
+    <p>The old rules (&ldquo;no guessing&rdquo;, &ldquo;verify or flag doubt&rdquo;) failed because they were
+    unfalsifiable in the moment. These are the checkable versions &mdash; a violation is visible in the text
+    itself, so moosa can catch it on sight. There is deliberately NO speed valve: reads are the default even
+    mid-conversation, and slowness is an accepted cost.</p>
+    <p><strong>Scope:</strong> claims about the state of the game, the data, or the docs. Narration of my own
+    actions (&ldquo;I edited X&rdquo;) is self-sourced and untagged.</p>
+    <ol>
+      <li><strong>Every in-scope factual claim wears its source, inline.</strong>
+        <code>(live: &lt;what was read in Studio, THIS session&gt;)</code> &middot;
+        <code>(doc: &lt;file &sect;sec&gt; &mdash; records intent, may lag live)</code> &middot;
+        <code>(data: &lt;chart + pinned window&gt;)</code> &middot;
+        <code>(moosa: said this session)</code> &middot; or the prefix <strong>SPECULATION:</strong>
+        An untagged in-scope claim is a violation.
+        <ul>
+          <li>Tags do not transfer across classes: a doc source can never carry a claim about live behavior
+          &mdash; it carries only &ldquo;the doc says X&rdquo;. Live claims need a live read.</li>
+          <li>An inference inherits the WEAKEST tag among its premises. One SPECULATION premise makes the
+          conclusion SPECULATION, and it says so.</li>
+          <li>A doc-map/summary line is NOT the doc: citing a doc unopened this session is an untagged claim.</li>
+        </ul>
+      </li>
+      <li><strong>No theory before inventory.</strong> If the answer depends on facts not read this session,
+      the reply IS the read &mdash; or naming what&rsquo;s needed &mdash; never a bridging theory. If the doc map
+      names a doc for the topic and it&rsquo;s unread, no opinion on that topic. Design discussions open by
+      listing &ldquo;Read this session: &hellip;&rdquo; so the gap is visible before the first claim.</li>
+      <li><strong>A factual correction stops the line.</strong> After any correction from moosa, the next
+      message contains no new synthesis: (a) the corrected fact re-verified at its source, (b) every other
+      claim currently in play re-tagged or withdrawn. Only then does discussion resume. Patching one error and
+      continuing on the same base is the violation.</li>
+      <li><strong>Design-discussion protocol (ratified s296, 2026-08-14 &mdash; a session of false tangents
+      paid for it).</strong> (a) The inventory is an ARTIFACT: a design discussion on any surface OPENS with a
+      walk of that surface (live captures / tree / numbers) posted first; design prose may cite only into it.
+      (b) Facts and ideas never share a paragraph: design messages carry a &ldquo;What is&rdquo; block (every
+      line tagged) and a &ldquo;What could be&rdquo; block (pure speculation). (c) moosa&rsquo;s gate: a design
+      message with no &ldquo;Read this session&rdquo; list is BOUNCED unread. (d) Depiction is CLONING: showing
+      &ldquo;current state&rdquo; means cloning/capturing the real thing &mdash; re-creating from memory is
+      forbidden even in a mockup. Tells: false claims cluster in TAG-FREE stretches of design rhetoric, and the
+      read-list must come from the session&rsquo;s actual Read calls (s296&rsquo;s opening list named a doc
+      that was never opened).</li>
+      <li><strong>A question about current state is a read, never a question (s421).</strong> Sort every
+      question before posting: &ldquo;what does it do now&rdquo; &rarr; read it and state it tagged;
+      &ldquo;what should it do&rdquo; &rarr; ask, with my rec. Only the second kind survives to the message.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Delegating to sub-agents</h2>
+    <p><strong>PRECONDITION (s278): delegate only what you can predict the ANSWER SHAPE of.</strong> Before
+    sending, write down the report&rsquo;s section headings and roughly what each will contain &mdash; if you
+    can&rsquo;t, you are SCOUTING, not delegating. Scout yourself, in the main loop, with one or two targeted
+    reads of the spine file, then delegate once the question has a known shape. <strong>A SECOND brief to the
+    same worker on the same job is a FAILURE SIGNAL, not a normal step.</strong> (&ldquo;Brief precisely&rdquo;
+    was already the rule above and it failed because it is unfalsifiable in the moment; this is the checkable
+    version.)</p>
+  </section>
+
+  <section>
+    <h2>Testing and scope</h2>
+    <ul>
+      <li><strong>Expected outcomes are written BEFORE the build; a PASS must point at evidence</strong>
+      (console line, world-state read, capture) &mdash; a PASS without one is a violation.</li>
+      <li><strong>A live-only bug gets its debug prints BEFORE the repro ask</strong> &mdash; one playtest,
+      not two.</li>
+      <li><strong>A scope CUT discovered at build time is an obstacle, not a decision</strong> &mdash; it goes
+      back as a question even when the answer looks obvious. <strong>Reporting a narrowed scope is not
+      re-confirming it.</strong></li>
+      <li><strong>Anomaly = data point, not conclusion</strong> &mdash; a contradicting finding means my model
+      is incomplete.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Corrections</h2>
+    <p>Only correct an earlier statement when the error would change moosa&rsquo;s code or decisions. One plain
+    sentence, then continue. No apologies, no detailed account of the mistake, no re-auditing work that was
+    correct.</p>
+  </section>
+
+  <footer>Moosa Bukhari &middot; <a href="./">Portfolio</a></footer>
+
+</div>
+</body>
+</html>
